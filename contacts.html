@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio-Main</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Modern Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <!-- Styles css -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- ===HEADER=== -->
+    <header class="header">
+      <div class="container flex-container">
+        <a id="WebStudio" href="#WebStudio" lang="en" class="logo link">
+          Web<span class="logo__theme-dark">Studio</span>
+        </a>
+        <nav class="navigation header__text-style">
+          <ul class="nav-list list">
+            <li class="nav-list__item">
+              <a class="nav-list__link link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link current link" href="./contacts.html"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__contacts list">
+          <li class="header__contacts-list header__text-style">
+            <a
+              class="header__contacts-link link"
+              href="mailto:info@devstudio.com"
+            >
+              <svg class="header__icon" width="16" height="12">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="header__contacts-list header__text-style">
+            <a class="header__contacts-link link" href="tel:+380961111111">
+              <svg class="header__icon" width="10" height="16">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main></main>
+
+    <!-- ===FOOTER=== -->
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <!-- DIV-1 - "footer__contacts" -->
+        <div class="footer__contacts">
+          <a href="#WebStudio" lang="en" class="logo link">
+            Web<span class="logo__theme-light">Studio</span>
+          </a>
+          <ul class="footer__list text-style-normal list">
+            <li class="footer__list-item">
+              <address class="address">
+                <a
+                  class="address__link link"
+                  href="https://goo.gl/maps/XaURiA1SZvXJjhPf8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26
+                </a>
+              </address>
+            </li>
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link link"
+                href="mailto:info@example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >info@example.com
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link link"
+                href="tel:+380991111111"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+38 099 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- DIV-2 - "footer-icons" -->
+        <div class="footer-join">
+          <h3 class="footer__title text-style-bold">Присоединяйтесь</h3>
+          <ul class="social-list">
+            <li class="social-list-item list">
+              <a
+                class="footer-join__link social-list-link link"
+                href="#instagram"
+              >
+                <svg class="footer-join__icon" width="20" height="20">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item list">
+              <a
+                class="footer-join__link social-list-link link"
+                href="#twitter"
+              >
+                <svg class="footer-join__icon" width="20" height="20">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item list">
+              <a
+                class="footer-join__link social-list-link link"
+                href="#facebook"
+              >
+                <svg class="footer-join__icon" width="20" height="20">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item list">
+              <a
+                class="footer-join__link social-list-link link"
+                href="#linkedin"
+              >
+                <svg class="footer-join__icon" width="20" height="20">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- DIV-3 - "footer-form" -->
+        <div class="footer-form">
+          <strong class="footer__title text-style-bold"
+            >Подпишитесь на рассылку
+          </strong>
+          <div class="footer-form__wrapper">
+            <label class="footer-form__field"
+              ><input
+                name="sign_user_email"
+                class="footer-form__input"
+                type="email"
+                placeholder="E-mail"
+                required
+            /></label>
+
+            <button type="submit" class="modal-btn footer-form__btn">
+              Подписаться
+              <svg class="footer-form__icon" width="24" height="24">
+                <use href="./images/icons.svg#telegram"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

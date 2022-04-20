@@ -1,0 +1,130 @@
+.port-main {}
+
+/* ====SECTION "port-projects" (UL-1 + UL-2)==== */
+.port-projects {}
+
+.port-wrapper {}
+
+/* ===H1 - hidden=== */
+.port-prj-title {}
+
+/* ==UL-1 "prj-type"== */
+.port-prj-type {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.port-type-item {
+    &:not(:first-child) {
+        margin-left: 8px;
+    }
+}
+
+.port-item-btn {
+    background-color: var(--secondary-bg-color-light);
+
+    border: 2px solid transparent;
+    border-radius: 4px;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    font-family: inherit;
+    @include font (500, 16px, 26px, 0.03em);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--portfolio-btn-active-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/* ==UL-2 "prj-list"== */
+.port-prj-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.port-list-item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc((100% - 90px) / 3);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-sizing 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:not(:nth-child(3n + 1)) {
+        margin-left: 30px;
+    }
+    
+    &:hover {
+        border: 1px solid #eeeeee;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.port-list-item-link {
+    color: inherit;
+}
+
+.port-list-item-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.port-item-img {}
+
+.port-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    font-style: normal;
+    @include font (400, 18px, 28px, 0.03em);
+
+    color: var(--text-color-light);
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .port-list-item-link:hover &,
+    .port-list-item-link:focus & {
+        transform: translateY(0%);
+    }
+}
+
+.port-item-wrapper {
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.port-item-title {
+    @include font (700, 18px, 36px, 0.06em);
+}
+
+.port-item-type {
+    @include font (400, 16px, 30px, 0.03em);
+    color: var(--secondary-text-color);
+}
