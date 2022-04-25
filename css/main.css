@@ -400,10 +400,6 @@ img {
   color: var(--header-sec-color);
 }
 
-.mobile-menu-wrapper {
-  display: none;
-}
-
 .mobile-menu-btn {
   background-color: transparent;
   border: none;
@@ -423,6 +419,10 @@ img {
 }
 
 .mobile-menu-btn.is-open .mobile-menu-btn__burger {
+  display: none;
+}
+
+.mobile-menu-wrapper {
   display: none;
 }
 
