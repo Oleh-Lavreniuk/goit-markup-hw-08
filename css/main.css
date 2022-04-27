@@ -368,34 +368,6 @@ img {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 480px) {
-  .header__container {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header__container {
-    width: 768px;
-  }
-  .header {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header__container {
-    width: 1200px;
-  }
-  .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
 .logo__theme-dark {
   color: var(--header-sec-color);
 }
@@ -417,31 +389,6 @@ img {
 .mobile-menu-btn:hover .mobile-menu-btn__burger,
 .mobile-menu-btn:focus .mobile-menu-btn__burger {
   fill: var(--accent-color);
-}
-
-.mobile-menu-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: var(--background-color-light);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mobile-menu-wrapper.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.mobile-menu-wrapper.is-open .container {
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .mobile-menu-wrapper__cont {
@@ -533,6 +480,65 @@ img {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: var(--background-color-light);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-menu-wrapper.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu-wrapper.is-open .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .header__container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    width: 768px;
+  }
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
+  .mobile-menu-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__container {
+    width: 1200px;
+  }
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .hero {
