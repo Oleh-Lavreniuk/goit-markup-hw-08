@@ -78,7 +78,7 @@
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: var(--background-color-light);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -89,6 +89,11 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 }
 
@@ -120,87 +125,115 @@
   // margin-left: 94px;
 }
 
-// .header__text-style {
-//     @include font (500, 14px, 16px, 0.02em);
-// }
+.header__text-style {
+  // @include font (500, 14px, 16px, 0.02em);
+}
 
-// .nav-list {
-//     @extend %align;
-// }
+.nav-list {
+  @include font(500, 40px, 47px, 0.02em);
+  //     @extend %align;
+}
 
-// .nav-list__item:not(:first-child) {
-//     margin-left: 50px;
-// }
+.nav-list__item:not(:first-child) {
+  margin-top: 32px;
+  // margin-left: 50px;
+}
 
-// .nav-list__link {
-//     position: relative;
+.nav-list__link {
+  //     position: relative;
 
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//     color: inherit;
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  // color: inherit;
+  color: var(--main-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//     &:hover,
-//     &:focus {
-//         color: var(--accent-color);
-//     }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 
-//     .nav-list &.current {
-//         color: var(--accent-color);
-//     }
+  //     .nav-list &.current {
+  //         color: var(--accent-color);
+  //     }
 
-//     .nav-list &.current::after {
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
+  //     .nav-list &.current::after {
+  //         position: absolute;
+  //         bottom: 0;
+  //         left: 0;
 
-//         display: inline-block;
-//         content: "";
-//         width: 100%;
-//         height: 4px;
-//         background-color: var(--accent-color);
-//         border-radius: 2px;
-//     }
-// }
+  //         display: inline-block;
+  //         content: "";
+  //         width: 100%;
+  //         height: 4px;
+  //         background-color: var(--accent-color);
+  //         border-radius: 2px;
+  //     }
+}
 
 .header__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 302px;
   // @extend %align;
   // margin-left: auto;
 }
 
-// .header__contacts-list {
-//     &:not(:first-child) {
-//         margin-left: 50px;
-//     }
-// }
+.header__contacts-list {
+  &:first-child {
+    margin-top: 32px;
+    order: 2;
+  }
 
-// .header__contacts-link {
-//     @extend %align;
-//     color: var(--secondary-text-color);
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // &:not(:first-child) {
+  // margin-left: 50px;
+  // }
+}
 
-//     &:hover,
-//     &:focus {
-//         color: var(--accent-color);
-//     }
-// }
+.header__contacts-link {
+  //     @extend %align;
+  //     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-// .header__icon {
-//     fill: var(--secondary-text-color);
-//     margin-right: 10px;
-//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  //     &:hover,
+  //     &:focus {
+  //         color: var(--accent-color);
+  //     }
+}
 
-//     .header__contacts-link:hover &,
-//     .header__contacts-link:focus & {
-//         fill: var(--accent-color);
-//     }
-// }
+.header__email {
+  color: var(--secondary-text-color);
+  @include font(500, 24px, 28px, 0.02em);
+}
+
+.header__icon {
+  display: none;
+  //     fill: var(--secondary-text-color);
+  //     margin-right: 10px;
+  //     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  //     .header__contacts-link:hover &,
+  //     .header__contacts-link:focus & {
+  //         fill: var(--accent-color);
+  //     }
+}
+
+.header__phone {
+  @include font(500, 34px, 40px, 0.02em);
+  color: var(--accent-color);
+}
 
 .mobile-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  margin-left: -20px;
 }
 
 .mobile-menu-list__item {
+  margin-left: 20px;
 }
 
 .mobile-menu-list__item-link {
+  @include font(500, 18px, 22px, 0.02em);
+  color: var(--accent-color);
 }
