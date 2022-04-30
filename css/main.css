@@ -365,7 +365,7 @@ img {
 }
 
 .mobile__container {
-  justify-content: space-between;
+  padding-left: 15px;
 }
 
 .logo__theme-dark {
@@ -389,12 +389,6 @@ img {
 .mobile-menu-btn:hover .mobile-menu-btn__burger,
 .mobile-menu-btn:focus .mobile-menu-btn__burger {
   fill: var(--accent-color);
-}
-
-.mobile-menu-wrapper__cont {
-  position: relative;
-  padding-bottom: 48px;
-  padding-top: 48px;
 }
 
 .mobile-menu-btn--close {
@@ -430,14 +424,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;
-  margin-left: -20px;
+  margin-left: -10px;
 }
 
-.mobile-menu-list__item {
-  margin-left: 20px;
+.mobile-menu-list__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mobile-menu-list__item-link {
+  padding-right: 10px;
+  padding-left: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -446,6 +442,10 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .mobile__container {
+    justify-content: space-between;
+    padding-right: 15px;
+  }
   .mobile-menu-wrapper {
     position: absolute;
     top: 0;
@@ -464,9 +464,14 @@ img {
     visibility: visible;
     pointer-events: auto;
   }
-  .mobile-menu-wrapper.is-open .container {
+  .mobile-menu-wrapper.is-open .header__container {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .mobile-menu-wrapper__cont {
+    position: relative;
+    padding-bottom: 48px;
+    padding-top: 48px;
   }
   .nav-list {
     font-weight: 500;
@@ -517,16 +522,21 @@ img {
     padding-top: 21px;
     padding-bottom: 21px;
   }
+  .mobile__container {
+    margin-left: auto;
+  }
   .mobile-menu-btn {
     display: none;
   }
+  .mobile-menu-wrapper {
+    width: 530.91px;
+    margin-left: 88px;
+    margin-right: auto;
+    padding-right: 15px;
+  }
   .mobile-menu-wrapper__cont {
     display: flex;
-    padding-bottom: 48px;
-    padding-top: 48px;
-  }
-  .navigation {
-    margin-left: 88px;
+    justify-content: space-between;
   }
   .header__text-style {
     font-weight: 500;
@@ -544,8 +554,9 @@ img {
     padding-top: 24px;
     padding-bottom: 24px;
   }
-  .navigation {
-    margin-left: 94px;
+  .mobile-menu-wrapper {
+    width: 946.73px;
+    margin-left: 93px;
   }
 }
 

@@ -7,7 +7,7 @@
 }
 
 .mobile__container {
-  justify-content: space-between;
+  padding-left: 15px;
 }
 
 .logo__theme-dark {
@@ -38,12 +38,6 @@
 }
 
 // mobile-menu-wrapper===
-.mobile-menu-wrapper__cont {
-  position: relative;
-  padding-bottom: 48px;
-  padding-top: 48px;
-}
-
 .mobile-menu-btn--close {
   position: absolute;
   top: 10px;
@@ -125,14 +119,16 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;
-  margin-left: -20px;
+  margin-left: -10px;
 }
 
-.mobile-menu-list__item {
-  margin-left: 20px;
+.mobile-menu-list__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mobile-menu-list__item-link {
+  padding-right: 10px;
+  padding-left: 10px;
   @include font(500, 18px, 22px, 0.02em);
   color: var(--accent-color);
 }
@@ -140,6 +136,11 @@
 // @MEDIA RULES@
 // 0px - 767px
 @media screen and (max-width: 767px) {
+  .mobile__container {
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
   .mobile-menu-wrapper {
     position: absolute;
     top: 0;
@@ -159,11 +160,17 @@
       visibility: visible;
       pointer-events: auto;
 
-      .container {
+      .header__container {
         padding-left: 40px;
         padding-right: 40px;
       }
     }
+  }
+
+  .mobile-menu-wrapper__cont {
+    position: relative;
+    padding-bottom: 48px;
+    padding-top: 48px;
   }
 
   .nav-list {
@@ -207,6 +214,9 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .mobile-menu-wrapper__cont {
+  }
 }
 
 // 480px +
@@ -217,14 +227,14 @@
 
 // 768px +
 @media screen and (min-width: 768px) {
-  .header__container {
-    // width: 768px;
-  }
-
   .header {
     display: flex;
     padding-top: 21px;
     padding-bottom: 21px;
+  }
+
+  .mobile__container {
+    margin-left: auto;
   }
 
   .mobile-menu-btn {
@@ -232,16 +242,18 @@
   }
 
   .mobile-menu-wrapper {
+    width: 530.91px;
+    margin-left: 88px;
+    margin-right: auto;
+    padding-right: 15px;
   }
 
   .mobile-menu-wrapper__cont {
     display: flex;
-    padding-bottom: 48px;
-    padding-top: 48px;
+    justify-content: space-between;
   }
 
   .navigation {
-    margin-left: 88px;
   }
 
   .header__text-style {
@@ -270,16 +282,19 @@
 
 // 1200px +
 @media screen and (min-width: 1200px) {
-  .header__container {
-    // width: 1200px;
-  }
-
   .header {
     padding-top: 24px;
     padding-bottom: 24px;
   }
 
+  .mobile-menu-wrapper {
+    width: 946.73px;
+    margin-left: 93px;
+  }
+
+  .mobile-menu-wrapper__cont {
+  }
+
   .navigation {
-    margin-left: 94px;
   }
 }
