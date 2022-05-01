@@ -238,11 +238,10 @@
   }
 
   .nav-list {
-    // display: flex;
+    display: flex;
   }
 
   .nav-list__item {
-    display: inline-block;
   }
 
   .nav-list__item:not(:first-child) {
