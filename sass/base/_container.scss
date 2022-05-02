@@ -1,16 +1,24 @@
 .container {
-    // width: 1200px;
-    // margin-left: auto;
-    // margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  // width: 1200px;
+  // margin-left: auto;
+  // margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .flex-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.main {}
+.main {
+}
 
-.activity {}
+.activity {
+  @include padding(60px, 60px);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

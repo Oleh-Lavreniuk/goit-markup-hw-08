@@ -40,3 +40,13 @@
   line-height: decimal-round($lh / $fs, 2);
   letter-spacing: $ls;
 }
+
+@mixin padding($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+// .section {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+// }
