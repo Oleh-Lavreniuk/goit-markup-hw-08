@@ -1,5 +1,8 @@
 .workspace {
+  width: 1200px;
   margin-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-title-list {
@@ -35,4 +38,12 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--text-color-light);
+}
+
+// @MEDIA RULES@
+// 0px - 1199px
+@media screen and (max-width: 1199px) {
+  .workspace {
+    display: none;
+  }
 }

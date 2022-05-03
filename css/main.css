@@ -818,7 +818,10 @@ img {
 }
 
 .workspace {
+  width: 1200px;
   margin-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-title-list {
@@ -853,6 +856,12 @@ img {
   text-transform: uppercase;
   text-align: center;
   color: var(--text-color-light);
+}
+
+@media screen and (max-width: 1199px) {
+  .workspace {
+    display: none;
+  }
 }
 
 .staff {
