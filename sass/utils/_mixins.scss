@@ -41,12 +41,7 @@
   letter-spacing: $ls;
 }
 
-@mixin padding($pt, $pb) {
-  padding-top: $pt;
-  padding-bottom: $pb;
-}
-
-// .section {
-//     padding-top: 94px;
-//     padding-bottom: 94px;
+// @mixin padding($pt, $pb) {
+//   padding-top: $pt;
+//   padding-bottom: $pb;
 // }

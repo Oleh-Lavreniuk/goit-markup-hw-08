@@ -84,14 +84,16 @@ img {
   align-items: center;
 }
 
-.activity {
+.section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .modal-btn {
@@ -844,6 +846,11 @@ img {
 
 .work-container-text {
   font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   text-align: center;
   color: var(--text-color-light);
 }

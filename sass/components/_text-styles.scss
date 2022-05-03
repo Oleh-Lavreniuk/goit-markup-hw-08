@@ -1,14 +1,16 @@
 .section-title {
-    margin-bottom: 50px;
-    @include font (700, 36px, 42px, 0.03em);    
-    text-align: center;
+  margin-bottom: 50px;
+  @include font(700, 36px, 42px, 0.03em);
+  text-align: center;
 }
 
+// dell →
 .text-style-bold {
-    @include font (700, 14px, 16px, 0.03em);
-    text-transform: uppercase;
+  @include font(700, 14px, 16px, 0.03em);
+  text-transform: uppercase;
 }
 
 .text-style-normal {
-    @include font (400, 14px, 24px, 0.03em);
+  @include font(400, 14px, 24px, 0.03em);
 }
+// ← dell
