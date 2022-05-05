@@ -34,6 +34,11 @@
   align-items: center;
 }
 
+.clients-wrapper, .footer__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* css rules to specify families
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
@@ -957,11 +962,6 @@ img {
   }
 }
 
-.clients-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .clients-list {
   display: flex;
   flex-wrap: wrap;
@@ -1035,13 +1035,13 @@ img {
 
 .footer__wrapper {
   display: flex;
-  align-items: baseline;
+  width: 480px;
 }
 
 /* DIV-1 - "footer-contacts" */
 .footer__contacts {
-  min-width: 231px;
-  margin-right: 70px;
+  justify-content: center;
+  width: 232px;
 }
 
 .logo__theme-light {
@@ -1053,7 +1053,7 @@ img {
 }
 
 .footer__list-item:not(:first-child) {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .address {
@@ -1098,14 +1098,6 @@ img {
 }
 
 /* DIV-3 - "footer-form" */
-.footer-form {
-  margin-left: auto;
-}
-
-.footer-form__wrapper {
-  display: flex;
-}
-
 .footer-form__field {
   width: 100%;
   margin-right: 12px;
@@ -1141,6 +1133,54 @@ img {
   padding: 8px 26px;
   justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__wrapper {
+    align-items: center;
+  }
+  .logo-footer {
+    display: block;
+    text-align: center;
+  }
+  .footer__list {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    width: 768px;
+    align-items: baseline;
+  }
+  .footer__contacts {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    width: 1200px;
+  }
+  .footer__contacts {
+    width: 231px;
+    margin-right: 70px;
+  }
+  .footer__list-item:not(:first-child) {
+    margin-top: 9px;
+  }
+  .footer-form {
+    margin-left: auto;
+  }
+  .footer-form__wrapper {
+    display: flex;
+  }
 }
 
 /* ====SECTION "port-projects" (UL-1 + UL-2)==== */
