@@ -6,6 +6,7 @@
   transform: translate(-50%, -50%);
   overflow: auto;
   width: 450px;
+  // width: calc(100vw - 30px);
   height: 609px;
   padding: 40px;
 
@@ -50,6 +51,13 @@
 }
 
 // @MEDIA RULES@
+// 480px +
+// @media screen and (min-width: 480px) {
+//   .modal {
+//     width: 450px;
+//   }
+// }
+
 // 1200px +
 @media screen and (min-width: 1200px) {
   .modal {
