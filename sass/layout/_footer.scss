@@ -12,7 +12,6 @@
 
 /* DIV-1 - "footer-contacts" */
 .footer__contacts {
-  //   display: flex;
   justify-content: center;
   width: 232px;
 }
@@ -131,14 +130,6 @@
   .logo-footer {
     display: block;
     text-align: center;
-  }
-
-  .footer__contacts,
-  .footer-join,
-  .footer-form {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
   }
 
   .footer__list {
