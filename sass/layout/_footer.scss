@@ -23,6 +23,7 @@
 
 .footer__list {
   margin-top: 20px;
+  @include font(400, 14px, 24px, 0.03em);
 }
 
 .footer__list-item {
@@ -57,7 +58,7 @@
 
 /* DIV-2 - "footer-icons" */
 .footer-join {
-  min-width: 206px;
+  width: 206px;
 }
 
 .footer__title {
@@ -124,7 +125,7 @@
 // 0px - 1199px
 @media screen and (max-width: 1199px) {
   .footer__wrapper {
-    align-items: center;
+    justify-content: center;
   }
 
   .logo-footer {
@@ -141,7 +142,6 @@
   }
 
   .footer__list {
-    @include font(400, 14px, 24px, 0.03em);
     text-align: center;
   }
 
@@ -166,6 +166,7 @@
 @media screen and (max-width: 767px) {
   .footer__wrapper {
     flex-direction: column;
+    align-items: center;
   }
 
   .footer__contacts {
@@ -200,7 +201,18 @@
   }
 
   .footer__contacts {
-    margin-right: 70px;
+    margin-right: 165px;
+  }
+}
+
+// 768px - 1199px
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer__contacts {
+    margin-bottom: 60px;
   }
 }
 
