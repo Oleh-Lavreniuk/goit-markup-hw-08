@@ -139,18 +139,6 @@
 @media screen and (max-width: 479px) {
 }
 
-// 480px - 767px
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  // .port-list-item-link {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
-  // .port-item-wrapper {
-  //   flex-grow: 1;
-  // }
-}
-
 // 480px +
 @media screen and (min-width: 480px) {
   .port-wrapper {
@@ -161,6 +149,19 @@
 
   .port-item-overlay {
     padding: 77px 24px;
+  }
+}
+
+// 768px - 1199px
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .port-list-item-link {
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .port-item-wrapper {
+    flex-grow: 1;
   }
 }
 
